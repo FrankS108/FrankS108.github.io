@@ -1,0 +1,60 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.contact{
+    padding: 2rem;
+
+    &__heading{
+        text-align: center;
+        margin: 2rem 0 2rem 0;
+        color: v.$white;
+    }
+
+    &__form{
+        font-size: 2rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__input{
+        display: flex;
+        margin-bottom: 2rem;   
+        flex-direction: column;  
+        
+        input:not([type="submit"]),
+        textarea{
+            border: 0.1rem solid #e1e1e1;
+            padding: 1rem;
+        }
+
+        textarea{
+            resize: none;
+            font-size: 1.5rem;
+        }
+    }
+
+    &__label{
+        color: v.$white;
+    }
+
+    @include m.tablet {
+        &__labeL{
+            flex-basis: 10rem;   
+        }
+        
+    }
+
+    &__button{
+        padding: 1rem;
+        font-weight: 700;
+        max-width: 40rem;
+        align-self: center;
+        width: 100%;
+        border-radius: 1rem;
+        transition: background-color 300ms;
+        &:hover{
+            background-color: v.$secondary;
+        }
+
+    }
+}

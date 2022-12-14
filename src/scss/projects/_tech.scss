@@ -1,0 +1,55 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.tech{
+    
+    &__list{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__link{
+        font-size: 1.3rem;
+        border-radius: 1rem;
+        padding: 1rem;
+        background-color: v.$background;
+        color: v.$white;
+        list-style: none;
+        font-weight: 700;
+
+        /*
+        &--html{
+            color: coral;
+        }
+
+        &--scss{
+            color: pink
+        }
+
+        &--css{
+            color: aquamarine;
+        }
+
+        &--git{
+            color: orange;
+        }
+
+        &--gulp{
+            color: cornflowerblue;
+        }
+
+        &--responsive{
+            color:darkseagreen;
+        }
+
+        &--bem{
+            color:yellowgreen;
+        }
+        */
+    }
+}

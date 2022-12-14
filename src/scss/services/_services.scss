@@ -1,0 +1,97 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.services{
+    padding: 2rem;
+    
+    &__heading{
+        margin: 3rem 0 0 0;
+        text-align: center;
+        color: v.$white;
+
+        @include m.tablet {
+            margin: 3rem 0 4rem 0;
+        }
+    }
+
+    &__image{
+        width: 30rem;
+        margin-bottom: 3rem;
+    }
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+        @include m.tablet {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;   
+            align-items: center;
+        }
+    }
+
+    &__card{
+        padding: 2rem;
+        background-color: v.$thirdOption;
+        border-radius: 2rem;
+        margin-bottom: 3rem;
+        opacity: 1;
+        
+        
+        @include m.tablet {
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+            margin-bottom: 0;
+            opacity: 0;
+            transition: opacity 1.5s;
+        }  
+
+        @include m.tablet {
+            &--show{
+            
+                opacity: 1;
+            }
+        }
+    }
+
+    &__title{
+        margin-bottom: 2rem;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    &__text{
+        margin: 0;
+        text-align: justify;
+    }
+
+    &__symbol{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        visibility: hidden;
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+        background-color: v.$white;
+        transition: background-color 300ms;
+        &:hover{
+            background-color: v.$secondary;
+        }
+      
+        @include m.tablet {
+            font-size: 4rem;
+            color: v.$black;
+            margin: 0;
+            padding: 0;
+            visibility: visible;
+    
+            &--left{
+                justify-self: center;
+            }
+    
+            &--right{
+                justify-self: center;
+            }
+        }
+    }
+}

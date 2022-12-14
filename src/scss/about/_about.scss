@@ -1,0 +1,43 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.about{
+    padding: 2rem;
+    color: v.$primary;
+    background-color: v.$secondary;
+
+    &__heading{
+        text-align: center;
+        margin: 0;
+        font-weight: 700;
+        
+        @include m.tablet {
+            text-align: start;
+        }
+    }
+
+    &__text{
+        color: v.$white;
+        text-align: justify;
+        margin-bottom: 3rem;
+        line-height: 1.5;
+        @include m.tablet {
+            text-align: justify;
+        }
+    }
+
+    @include m.tablet {
+        &__content{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+    }
+
+    @include m.tablet {
+        &__image{
+            width: 50%;
+        }    
+    }
+}
