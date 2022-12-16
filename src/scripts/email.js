@@ -3,8 +3,6 @@ let inputName = document.getElementById('name');
 let inputEmail = document.getElementById('email');
 let inputMessage = document.getElementById('message');
 
-console.log(inputMessage)
-
 document.getElementById('form')
  .addEventListener('submit', function(event) {
    event.preventDefault();
